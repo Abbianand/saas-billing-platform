@@ -1,0 +1,23 @@
+<!-- 1. start Postgresql
+"C:\Program Files\PostgreSQL\18\bin\pg_ctl.exe" start -D "C:\Program Files\PostgreSQL\18\data"
+
+    2. sever is running
+"C:\Program Files\PostgreSQL\18\bin\pg_ctl.exe" status -D "C:\Program Files\PostgreSQL\18\data"
+
+    3. Verify the database
+"C:\Program Files\PostgreSQL\18\bin\psql.exe" -U postgres -h localhost -p 5432 -d saas_billing
+
+    4. check database
+\dt
+ -->q
+<!-- create migration file -->
+# alembic\versions\bcec6d0fe736_create_initial_billing_tables.py
+
+<!-- remove column from table -->
+# alembic revision --autogenerate -m "remove tenant_id from usage records"
+
+<!-- Apply Migrate -->
+# alembic upgrade head
+
+<!-- backend running command -->
+# uvicorn app.main:app --reload

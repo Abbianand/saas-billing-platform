@@ -1,0 +1,58 @@
+
+.tenant-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+  align-items: end;
+}
+
+.tenant-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tenant-form input,
+.tenant-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d9deea;
+  border-radius: 8px;
+  font: inherit;
+  background: white;
+}
+
+.tenant-form .primary-button {
+  grid-column: 1 / -1;
+  justify-self: end;
+  width: fit-content;
+}
+
+.tenants-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.tenants-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tenants-table th,
+.tenants-table td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #e6eaf0;
+  white-space: nowrap;
+}
+
+.tenants-table th {
+  background: #f7f8fc;
+  color: #64748b;
+  font-size: 13px;
+}
